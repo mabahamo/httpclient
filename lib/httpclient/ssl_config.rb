@@ -84,7 +84,8 @@ class HTTPClient
       @client = client
       @cert_store = X509::Store.new
       @client_cert = @client_key = @client_ca = nil
-      @verify_mode = SSL::VERIFY_PEER | SSL::VERIFY_FAIL_IF_NO_PEER_CERT
+      #@verify_mode = SSL::VERIFY_PEER | SSL::VERIFY_FAIL_IF_NO_PEER_CERT
+      @verify_mode = SSL::VERIFY_NONE
       @verify_depth = nil
       @verify_callback = nil
       @dest = nil
